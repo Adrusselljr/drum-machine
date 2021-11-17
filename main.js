@@ -3,11 +3,11 @@ const count = document.querySelector(".count")
 let num = 1
 
 const increment = () => {
-    count.innerText = num
     num++
     if(num >= 5) {
         reset()
     }
+    count.innerText = num
 }
 
 // Resets count
@@ -45,20 +45,19 @@ const update = () => {
     }
 
     if(KickDrum.checked) {
-        if(Number(kickDrumNum.value) === num) {
+        if(Number(kickDrumNum1.value) === num || Number(kickDrumNum2.value) === num) {
             kickDrum.play()
         }
-        console.log((kickDrumNum.value), num)
     }
 
     if(HiHat.checked) {
-        if(Number(hiHatNum.value) === num) {
+        if(Number(hiHatNum1.value) === num || Number(hiHatNum2.value) === num) {
             hiHat.play()
         }
     }
 
     if(SnareDrum.checked) {
-        if(Number(snareDrumNum.value) === num) {
+        if(Number(snareDrumNum1.value) === num || Number(snareDrumNum2.value) === num) {
             snareDrum.play()
         }
     }
