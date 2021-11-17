@@ -37,18 +37,27 @@
 
     <label>Metronome</label>
     <input type="checkbox" name="drum-machine" id="Metronome"><br>
-    <label>Kick Drum</label>
-    <input type="checkbox" name="drum-machine" id="KickDrum"><br>
-    <input type="number" class="inputs" id="kickDrumNum1">
-    <input type="number" class="inputs" id="kickDrumNum2"><br>
-    <label>Hi-Hat</label>
-    <input type="checkbox" name="drum-machine" id="HiHat"><br>
-    <input type="number" class="inputs" id="hiHatNum1">
-    <input type="number" class="inputs" id="hiHatNum2"><br>
-    <label>Snare-Drum</label>
-    <input type="checkbox" name="drum-machine" id="SnareDrum"><br>
-    <input type="number" class="inputs" id="snareDrumNum1">
-    <input type="number" class="inputs" id="snareDrumNum2">
+    
+    <div id="parent">
+        <div class="child">
+            <label>Kick Drum</label>
+            <input type="checkbox" name="drum-machine" id="KickDrum"><br>
+            <input type="number" class="inputs" id="kickDrumNum1">
+            <input type="number" class="inputs" id="kickDrumNum2">
+        </div>
+        <div class="child">
+            <label>Hi-Hat</label>
+            <input type="checkbox" name="drum-machine" id="HiHat"><br>
+            <input type="number" class="inputs" id="hiHatNum1">
+            <input type="number" class="inputs" id="hiHatNum2">
+        </div>
+        <div class="child">
+            <label>Snare-Drum</label>
+            <input type="checkbox" name="drum-machine" id="SnareDrum"><br>
+            <input type="number" class="inputs" id="snareDrumNum1">
+            <input type="number" class="inputs" id="snareDrumNum2">
+        </div>
+    </div>
 
     <script src="main.js"></script>
 
