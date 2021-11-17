@@ -50,17 +50,56 @@ const update = () => {
             kickDrum.play()
         }
     }
+    if(kickEven.checked) {
+        if(num % 2 === 0) {
+            kickDrum.play()
+        }
+    }
+    if(kickOdd.checked) {
+        if(num % 2 === 1) {
+            kickDrum.play()
+        }
+    }
+    if(kickAll.checked) {
+        kickDrum.play()
+    }
 
     if(HiHat.checked) {
         if(Number(hiHatNum1.value) === num || Number(hiHatNum2.value) === num) {
             hiHat.play()
         }
     }
+    if(hiEven.checked) {
+        if(num % 2 === 0) {
+            hiHat.play()
+        }
+    }
+    if(hiOdd.checked) {
+        if(num % 2 === 1) {
+            hiHat.play()
+        }
+    }
+    if(hiAll.checked) {
+        hiHat.play()
+    }
 
     if(SnareDrum.checked) {
         if(Number(snareDrumNum1.value) === num || Number(snareDrumNum2.value) === num) {
             snareDrum.play()
         }
+    }
+    if(snareEven.checked) {
+        if(num % 2 === 0) {
+            snareDrum.play()
+        }
+    }
+    if(snareOdd.checked) {
+        if(num % 2 === 1) {
+            snareDrum.play()
+        }
+    }
+    if(snareAll.checked) {
+        snareDrum.play()
     }
 
 }
