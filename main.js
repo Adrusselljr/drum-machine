@@ -9,10 +9,10 @@ const snareDrum = new Audio('sounds/snare-drum.mp3')
 const kickDrumNum = document.querySelector("#kickDrumNum")
 const hiHatNum = document.querySelector("#hiHatNum")
 const snareDrumNum = document.querySelector("#snareDrumNum")
-
-// Set count and increment count
 const count = document.querySelector(".count")
 const beatCount = document.querySelector("#beatCount")
+
+// Set count and increment count
 let num = 1
 
 const increment = () => {
