@@ -80,7 +80,7 @@ body {
 #parent {
     width: 400px;
     display: flex;
-    margin-left: 26px;
+    margin-left: 20px;
     justify-content: space-between;
 }
 
