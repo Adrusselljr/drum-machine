@@ -16,6 +16,16 @@ const reset = () => {
     num = 1
 }
 
+// Even check
+const even = () => {
+    num % 2 === 0
+}
+
+// Odd check
+const odd = () => {
+    num % 2 === 1
+}
+
 // Sets metronome as default setting
 Metronome.checked = true
 
@@ -54,13 +64,13 @@ const update = () => {
     }
     // Kick drum even count
     if(kickEven.checked) {
-        if(num % 2 === 0) {
+        if(even()) {
             kickDrum.play()
         }
     }
     // Kick drum odd count
     if(kickOdd.checked) {
-        if(num % 2 === 1) {
+        if(odd()) {
             kickDrum.play()
         }
     }
@@ -77,13 +87,13 @@ const update = () => {
     }
     // Hi-hat even count
     if(hiEven.checked) {
-        if(num % 2 === 0) {
+        if(even()) {
             hiHat.play()
         }
     }
     // Hi-hat odd count
     if(hiOdd.checked) {
-        if(num % 2 === 1) {
+        if(odd()) {
             hiHat.play()
         }
     }
@@ -100,13 +110,13 @@ const update = () => {
     }
     // Snare drum even count
     if(snareEven.checked) {
-        if(num % 2 === 0) {
+        if(even()) {
             snareDrum.play()
         }
     }
     // Snare drum odd count
     if(snareOdd.checked) {
-        if(num % 2 === 1) {
+        if(odd()) {
             snareDrum.play()
         }
     }
