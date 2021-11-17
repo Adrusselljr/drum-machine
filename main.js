@@ -1,10 +1,11 @@
 // Set count and increment count
 const count = document.querySelector(".count")
+const beatCount = document.querySelector("#beatCount")
 let num = 1
 
 const increment = () => {
     num++
-    if(num >= 5) {
+    if(num >= Number(beatCount.value) + 1) {
         reset()
     }
     count.innerText = num
