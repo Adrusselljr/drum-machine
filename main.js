@@ -1,3 +1,15 @@
+// Setup sounds
+const tick = new Audio('sounds/tick.mp3')
+const tock = new Audio('sounds/tock.mp3')
+const kickDrum = new Audio('sounds/kick-drum.mp3')
+const hiHat = new Audio('sounds/hi-hat.mp3')
+const snareDrum = new Audio('sounds/snare-drum.mp3')
+
+// Query elements
+const kickDrumNum = document.querySelector("#kickDrumNum")
+const hiHatNum = document.querySelector("#hiHatNum")
+const snareDrumNum = document.querySelector("#snareDrumNum")
+
 // Set count and increment count
 const count = document.querySelector(".count")
 const beatCount = document.querySelector("#beatCount")
@@ -29,17 +41,6 @@ const odd = () => {
 // Sets metronome as default setting
 Metronome.checked = true
 
-// Setup sounds
-const tick = new Audio('sounds/tick.mp3')
-const tock = new Audio('sounds/tock.mp3')
-const kickDrum = new Audio('sounds/kick-drum.mp3')
-const hiHat = new Audio('sounds/hi-hat.mp3')
-const snareDrum = new Audio('sounds/snare-drum.mp3')
-
-// Query elements
-const kickDrumNum = document.querySelector("#kickDrumNum")
-const hiHatNum = document.querySelector("#hiHatNum")
-const snareDrumNum = document.querySelector("#snareDrumNum")
 
 // This function is called every 600ms
 const update = () => {
