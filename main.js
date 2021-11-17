@@ -36,6 +36,7 @@ const update = () => {
     
     increment()
 
+    // Metronome
     if(Metronome.checked) {
         if(num % 4 === 0) {
             tock.play()
@@ -45,59 +46,71 @@ const update = () => {
         }
     }
 
+    // Kick drum inputs
     if(KickDrum.checked) {
         if(Number(kickDrumNum1.value) === num || Number(kickDrumNum2.value) === num) {
             kickDrum.play()
         }
     }
+    // Kick drum even count
     if(kickEven.checked) {
         if(num % 2 === 0) {
             kickDrum.play()
         }
     }
+    // Kick drum odd count
     if(kickOdd.checked) {
         if(num % 2 === 1) {
             kickDrum.play()
         }
     }
+    // Kick drum all count
     if(kickAll.checked) {
         kickDrum.play()
     }
 
+    // Hi-hat inputs
     if(HiHat.checked) {
         if(Number(hiHatNum1.value) === num || Number(hiHatNum2.value) === num) {
             hiHat.play()
         }
     }
+    // Hi-hat even count
     if(hiEven.checked) {
         if(num % 2 === 0) {
             hiHat.play()
         }
     }
+    // Hi-hat odd count
     if(hiOdd.checked) {
         if(num % 2 === 1) {
             hiHat.play()
         }
     }
+    // Hi-hat all count
     if(hiAll.checked) {
         hiHat.play()
     }
 
+    // Snare drum inputs
     if(SnareDrum.checked) {
         if(Number(snareDrumNum1.value) === num || Number(snareDrumNum2.value) === num) {
             snareDrum.play()
         }
     }
+    // Snare drum even count
     if(snareEven.checked) {
         if(num % 2 === 0) {
             snareDrum.play()
         }
     }
+    // Snare drum odd count
     if(snareOdd.checked) {
         if(num % 2 === 1) {
             snareDrum.play()
         }
     }
+    // Snare drum all count
     if(snareAll.checked) {
         snareDrum.play()
     }
