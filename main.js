@@ -1,27 +1,21 @@
 // Set count and increment count
 const count = document.querySelector(".count")
-let num = 0
+let num = 1
 
 const increment = () => {
-    num++
     count.innerText = num
-    if(num === 4) {
+    num++
+    if(num >= 5) {
         reset()
     }
 }
 
-const countUpdate = () => {
-    setInterval(increment, 600)
-}
-
-setTimeout(countUpdate, 300)
-
 // Resets count
 const reset = () => {
-    num = 0
+    num = 1
 }
 
-// Sets metronome to default setting
+// Sets metronome as default setting
 Metronome.checked = true
 
 // Setup sounds
@@ -38,6 +32,8 @@ const snareDrumNum = document.querySelector("#snareDrumNum")
 
 // This function is called every 600ms
 const update = () => {
+    
+    increment()
 
     if(Metronome.checked) {
         if(num % 4 === 0) {
@@ -52,6 +48,7 @@ const update = () => {
         if(Number(kickDrumNum.value) === num) {
             kickDrum.play()
         }
+        console.log((kickDrumNum.value), num)
     }
 
     if(HiHat.checked) {
