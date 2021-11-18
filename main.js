@@ -6,25 +6,6 @@ const hiHat = new Audio('sounds/hi-hat.mp3')
 const snareDrum = new Audio('sounds/snare-drum.mp3')
 
 // Query elements
-// const Metronome = document.querySelector("#Metronome")
-// const KickDrum = document.querySelector("#KickDrum")
-// const HiHat = document.querySelector("#HiHat")
-// const SnareDrum = document.querySelector("#SnareDrum")
-// const kickDrumNum1 = document.querySelector("#kickDrumNum1")
-// const hiHatNum1 = document.querySelector("#hiHatNum1")
-// const snareDrumNum1 = document.querySelector("#snareDrumNum1")
-// const kickDrumNum2 = document.querySelector("#kickDrumNum2")
-// const hiHatNum2 = document.querySelector("#hiHatNum2")
-// const snareDrumNum2 = document.querySelector("#snareDrumNum2")
-// const kickEven = document.querySelector("#kickEven")
-// const kickOdd = document.querySelector("#kickOdd")
-// const kickAll = document.querySelector("#kickAll")
-// const hiEven = document.querySelector("#hiEven")
-// const hiOdd = document.querySelector("#hiOdd")
-// const hiAll = document.querySelector("#hiAll")
-// const snareEven = document.querySelector("#snareEven")
-// const snareOdd = document.querySelector("#snareOdd")
-// const snareAll = document.querySelector("#snareAll")
 const count = document.querySelector(".count")
 const beatCount = document.querySelector("#beatCount")
 
@@ -45,7 +26,7 @@ const reset = () => {
 }
 
 // Sets metronome as default setting
-Metronome.checked = true
+metronomeBox.checked = true
 
 
 // This function is called every 600ms
@@ -54,7 +35,7 @@ const update = () => {
     increment()
 
     // Metronome
-    if(Metronome.checked) {
+    if(metronomeBox.checked) {
         if(num % 4 === 0) {
             tock.play()
         }
@@ -64,7 +45,7 @@ const update = () => {
     }
 
     // Kick drum inputs
-    if(KickDrum.checked) {
+    if(kickDrumBox.checked) {
         if(Number(kickDrumNum1.value) === num || Number(kickDrumNum2.value) === num) {
             kickDrum.play()
         }
@@ -87,7 +68,7 @@ const update = () => {
     }
 
     // Hi-hat inputs
-    if(HiHat.checked) {
+    if(hiHatBox.checked) {
         if(Number(hiHatNum1.value) === num || Number(hiHatNum2.value) === num) {
             hiHat.play()
         }
@@ -110,7 +91,7 @@ const update = () => {
     }
 
     // Snare drum inputs
-    if(SnareDrum.checked) {
+    if(snareDrumBox.checked) {
         if(Number(snareDrumNum1.value) === num || Number(snareDrumNum2.value) === num) {
             snareDrum.play()
         }
