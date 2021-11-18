@@ -6,9 +6,25 @@ const hiHat = new Audio('sounds/hi-hat.mp3')
 const snareDrum = new Audio('sounds/snare-drum.mp3')
 
 // Query elements
-const kickDrumNum = document.querySelector("#kickDrumNum")
-const hiHatNum = document.querySelector("#hiHatNum")
-const snareDrumNum = document.querySelector("#snareDrumNum")
+// const Metronome = document.querySelector("#Metronome")
+// const KickDrum = document.querySelector("#KickDrum")
+// const HiHat = document.querySelector("#HiHat")
+// const SnareDrum = document.querySelector("#SnareDrum")
+// const kickDrumNum1 = document.querySelector("#kickDrumNum1")
+// const hiHatNum1 = document.querySelector("#hiHatNum1")
+// const snareDrumNum1 = document.querySelector("#snareDrumNum1")
+// const kickDrumNum2 = document.querySelector("#kickDrumNum2")
+// const hiHatNum2 = document.querySelector("#hiHatNum2")
+// const snareDrumNum2 = document.querySelector("#snareDrumNum2")
+// const kickEven = document.querySelector("#kickEven")
+// const kickOdd = document.querySelector("#kickOdd")
+// const kickAll = document.querySelector("#kickAll")
+// const hiEven = document.querySelector("#hiEven")
+// const hiOdd = document.querySelector("#hiOdd")
+// const hiAll = document.querySelector("#hiAll")
+// const snareEven = document.querySelector("#snareEven")
+// const snareOdd = document.querySelector("#snareOdd")
+// const snareAll = document.querySelector("#snareAll")
 const count = document.querySelector(".count")
 const beatCount = document.querySelector("#beatCount")
 
@@ -26,16 +42,6 @@ const increment = () => {
 // Resets count
 const reset = () => {
     num = 1
-}
-
-// Even check
-const even = () => {
-    num % 2 === 0
-}
-
-// Odd check
-const odd = () => {
-    num % 2 === 1
 }
 
 // Sets metronome as default setting
@@ -65,13 +71,13 @@ const update = () => {
     }
     // Kick drum even count
     if(kickEven.checked) {
-        if(even()) {
+        if(num % 2 === 0) {
             kickDrum.play()
         }
     }
     // Kick drum odd count
     if(kickOdd.checked) {
-        if(odd()) {
+        if(num % 2 === 1) {
             kickDrum.play()
         }
     }
@@ -88,13 +94,13 @@ const update = () => {
     }
     // Hi-hat even count
     if(hiEven.checked) {
-        if(even()) {
+        if(num % 2 === 0) {
             hiHat.play()
         }
     }
     // Hi-hat odd count
     if(hiOdd.checked) {
-        if(odd()) {
+        if(num % 2 === 1) {
             hiHat.play()
         }
     }
@@ -111,13 +117,13 @@ const update = () => {
     }
     // Snare drum even count
     if(snareEven.checked) {
-        if(even()) {
+        if(num % 2 === 0) {
             snareDrum.play()
         }
     }
     // Snare drum odd count
     if(snareOdd.checked) {
-        if(odd()) {
+        if(num % 2 === 1) {
             snareDrum.play()
         }
     }
